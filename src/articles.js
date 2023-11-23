@@ -2,7 +2,7 @@ const articles = [
     {
         id: 0,
         name: "Bananas",
-        img: './assets/img/coursesYiga.jpg',
+        img: 'coursesYiga.jpg',
         description: "Vous êtes un Yiga ? Vous A-D-O-R-E-Z les bananes ! Ici, on les vend en gros !",
         price: 245.0,
         qte: 27,
@@ -11,8 +11,8 @@ const articles = [
     {
         id: 1,
         name: "Organiseur pour brodeuse",
-        img: './assets/img/threadsOrganizer.jpg',
-        description: "Marre des échevettes qui trainent et s\'emmêlent. Cette aiguille a encore disparu ? Pas de problème, voici LA solution ! Fabrication artisanale, en bois véritable.",
+        img: 'threadsOrganizer.jpg',
+        description: "Marre des échevettes qui trainent et s\'emmêlent. Cette aiguille a encore disparu ? Pas de problème, voici LA solution ! En bois véritable.",
         price: 25.0,
         qte: 42,
         promo: false
@@ -20,7 +20,7 @@ const articles = [
     {
         id: 2,
         name: "Cadre Nostalgique",
-        img: './assets/img/oldHelper.jpg',
+        img: 'oldHelper.jpg',
         description: "Votre petit assistant virtuel vous manque ? Redtrouvez-le grâce à ces ouvrages artisanaux fabriqués par nos brodeuses",
         price: 20.0,
         qte: 36,
@@ -29,7 +29,7 @@ const articles = [
     {
         id: 3,
         name: "Faux Ongles",
-        img: './assets/img/poseVernis.jpg',
+        img: 'poseVernis.jpg',
         description: "Faux ongles X 10 , motifs aux choix (fournis sans la colle)",
         price: 10.0,
         qte: 17.0,
@@ -38,8 +38,8 @@ const articles = [
     {
         id: 4,
         name: "Snacks",
-        img: './assets/img/snacksOverflow.jpg',
-        description: "Snacks aux choix. ATTENTION ! Uiquement en vente à emporter ! Livraison indisponible !",
+        img: 'snacksOverflow.jpg',
+        description: "Snacks aux choix. ATTENTION ! Uniquement en vente à emporter ! Livraison indisponible !",
         price: 1.5,
         qte: 92,
         promo: true
@@ -47,7 +47,7 @@ const articles = [
     {
         id: 5,
         name: "Bicyclette Waterproof",
-        img: "./assets/img/veloWaterPlouf.jpg",
+        img: "veloWaterPlouf.jpg",
         description: "Comme son nom l'indique, ce vélo fonctionne sous l'eau. Utilisation d'équipement de plongée recommandée !!! (Voir section 'Sport' de notre site)",
         price: 435.0,
         qte: 2,
