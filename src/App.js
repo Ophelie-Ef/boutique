@@ -17,7 +17,6 @@ const App = () => {
     articlesTmp[id].qte--;
     setState({
       'articles':articlesTmp
-    
     })}    
   }
   return (
