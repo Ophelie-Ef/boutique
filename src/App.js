@@ -1,9 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 
-const App = ()=>{
-  return(
-    <></>
+const App = () => {
+  return (
+    <>
+      <header></header>
+      <main></main>
+      <footer></footer>
+    </>
   )
 }
 
