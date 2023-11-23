@@ -12,8 +12,8 @@ const App = () => {
   const decrementQte = (id) => {
     //state.article[id].qte--; ==>> ne fonctionnera pas !!!
     //Option 1 (méthode bourrin !):
-    let articlesTmp = state.articles;
-    if (articlesTmp[id].qte > 0){
+    if (state.articles[id].qte > 0){
+      let articlesTmp = state.articles;
     articlesTmp[id].qte--;
     setState({
       'articles':articlesTmp
