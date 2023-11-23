@@ -1,1 +1,49 @@
-.Card {}
+.Card {
+    border: black solid 2px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    margin: .5rem;
+    padding: 1rem;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    width: auto;
+}
+
+.nom{
+    font-weight: bold;
+}
+
+.prix{
+    background-color: yellow;
+    font-size: 2rem;
+    padding: .5rem;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+}
+
+.triche {
+    display: flex;
+    ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buy {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: orangered;
+    border: orangered 2px solid;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    padding: .5rem;
+}
