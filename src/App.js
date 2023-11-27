@@ -3,17 +3,17 @@ import Menu from './components/Menu/Menu';
 import Gallery from './components/Gallery/Gallery';
 import { articles } from './articles';
 import { menuentries } from './menuentries';
-import { Panier } from './components/Panier/Panier';
+import Panier from './components/Panier/Panier';
 import './App.css';
 
 const App = () => {
-  const [statePanier, setStatePanier] = React.useState({'displayPanier': false});
+  const [statePanier, setStatePanier] = React.useState({ 'displayPanier': false });
   const handleDisplayPanier = () => {
-    setStatePanier({'displayPanier':!statePanier.displayPanier})
-    console.dir(statePanier.displayPanier);
+    setStatePanier({ 'displayPanier': !statePanier.displayPanier })
+    // console.log(statePanier);
   }
 
-  const [state, setState] = React.useState({'articles': articles})
+  const [state, setState] = React.useState({ 'articles': articles })
   const decrementQte = (id) => {
     //state.article[id].qte--; ==>> ne fonctionnera pas !!!
     //Option 1 (méthode bourrin !):
@@ -31,9 +31,9 @@ const App = () => {
     <>
       <header>
         <Menu sendEntries={menuentries} handleDisplayPanier={handleDisplayPanier}></Menu>
-        {statePanier.displayPanier ? <Panier></Panier> : <></>}
       </header>
       <main>
+        {statePanier.displayPanier ? <Panier handleDisplayPanier={handleDisplayPanier}></Panier> : <></>}
         <Gallery articles={state.articles} decrementQte={decrementQte}></Gallery>
       </main>
       <footer></footer>

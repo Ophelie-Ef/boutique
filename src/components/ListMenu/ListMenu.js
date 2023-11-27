@@ -1,6 +1,6 @@
 import React from 'react';
 import './ListMenu.css';
-import { Panier } from '../Panier/Panier';
+import Panier from '../Panier/Panier';
 
 const ListMenu = (props) => {
   return (
