@@ -1,6 +1,6 @@
 const menuentries = [
     {
-        entry: "Panier",
+        entry: "Bidule",
         url: "https://www.w3schools.com",
     },
     {
@@ -8,7 +8,7 @@ const menuentries = [
         url: "https://openclassrooms.com/fr",
     },
     {
-        entry: "Truc",
+        entry: "Panier",
         url: "https://developer.mozilla.org/en-US/",
     }
 ]
