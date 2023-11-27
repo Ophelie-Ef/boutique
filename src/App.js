@@ -4,6 +4,7 @@ import Gallery from './components/Gallery/Gallery';
 import { articles } from './articles';
 import { menuentries } from './menuentries';
 import Panier from './components/Panier/Panier';
+import BoutiqueContext from './contexts/BoutiqueContext';
 import './App.css';
 
 const App = () => {
@@ -37,7 +38,7 @@ const App = () => {
   }
 
   return (
-    <>
+    <BoutiqueContext.Provider value={state}>
       <header>
         <Menu sendEntries={menuentries} handleDisplayPanier={handleDisplayPanier}></Menu>
       </header>
@@ -46,7 +47,7 @@ const App = () => {
         <Gallery articles={state.articles} decrementQte={decrementQte}></Gallery>
       </main>
       <footer></footer>
-    </>
+    </BoutiqueContext.Provider>
   )
 }
 
