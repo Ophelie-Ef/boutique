@@ -22,20 +22,34 @@ const App = () => {
   );
 
   const decrementQte = (id) => {
+    // je déclare un tableau vide pour enregistrer mes achats
     let achatTmp = [];
-    if (state.achat.length === 0) {
-      achatTmp = [{ 'idachat': id, 'qteachat': 1 }]
-    } else {
+    // je déclare une boolean pour arrêter ma boucle su id === value.idachat
+    // si il existe dans mon tableau achat un article avec le même id (soit déjà acheté)
+    let stop = false;
+    // une condition pour déterminer si mon tableau achat est vide
+    if (state.achat.length > 0) {
+      // je lance une boucle map qui pourra retourner une copie de state.achat dans achatTmp
       achatTmp = state.achat.map((value, index) => {
+        // si le résultat ets positif
         if (value.idachat === id) {
-          value.qteachat++
-        } else {
-          value = { 'idachat': id, 'qteachat': 1 }
+          // j'incrémente la qté de l'article acheté
+          value.qteachat++;
+          // j'empêche l'ajout d'un nouvel article identique à achatTmp
+          stop = true;
         }
         return value
       })
     }
+    // si stop est resté à false (ma boucle n'a pas trouvé de résultat positif)
+    if (!stop) {
+      // j'ajoute un nouvel article à mon tableau achatTmp
+      achatTmp = [...achatTmp, { 'idachat': id, 'qteachat': 1 }]
+    }
+
+
     console.dir(achatTmp);
+
     //state.article[id].qte--; ==>> ne fonctionnera pas !!!
     if (state.articles[id].qte > 0) {
       let articlesTmp = state.articles;
