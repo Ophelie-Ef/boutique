@@ -15,12 +15,11 @@ const App = () => {
     }
   )
 
-  const [statePanier, setStatePanier] = React.useState({ 'displayPanier': false });
-  const handleDisplayPanier = () => {
-    setStatePanier({ 'displayPanier': !statePanier.displayPanier })
-    // console.log(statePanier);
-  }
-
+  const [statePanier, setStatePanier] = React.useState(
+    {
+      'displayPanier': false
+    }
+  );
 
   const decrementQte = (id) => {
     //state.article[id].qte--; ==>> ne fonctionnera pas !!!
@@ -37,15 +36,20 @@ const App = () => {
     }
   }
 
+  const handleDisplayPanier = () => {
+    setStatePanier({ 'displayPanier': !statePanier.displayPanier })
+    // console.log(statePanier);
+  }
+
   return (
-    <BoutiqueContext.Provider value={state}>
+    <BoutiqueContext.Provider value={{ ...state, 'decrementQte': decrementQte }}>
       <header>
         <Menu sendEntries={menuentries} handleDisplayPanier={handleDisplayPanier}></Menu>
       </header>
       <main>
         {statePanier.displayPanier ? <Panier
-        handleDisplayPanier={handleDisplayPanier}
-        achat={state.achat}
+          handleDisplayPanier={handleDisplayPanier}
+          achat={state.achat}
         ></Panier> : <></>}
         <Gallery articles={state.articles} decrementQte={decrementQte}></Gallery>
       </main>
