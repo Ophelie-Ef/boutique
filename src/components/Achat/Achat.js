@@ -3,7 +3,7 @@ import BoutiqueContext from '../../contexts/BoutiqueContext';
 import './Achat.css';
 
 const Achat = (props) => {
-    let id = props.id;
+    let id = props.item.idachat;
     const boutiqueContext = React.useContext(BoutiqueContext);
     let article = boutiqueContext.articles[id];
     return (
@@ -16,7 +16,7 @@ const Achat = (props) => {
                         <span className='plusButton'>
                             <button className='plus' >-</button>
                         </span>
-                        <span className='arclQte'>{article.qte}</span>
+                        <span className='arclQte'>{props.item.qteachat}</span>
                         <span className='moinsButton'>
                             <button className='moins' onClick={
                                 () => boutiqueContext.decrementQte(id)

@@ -22,16 +22,27 @@ const App = () => {
   );
 
   const decrementQte = (id) => {
+    let achatTmp = [];
+    if (state.achat.length === 0) {
+      achatTmp = [{ 'idachat': id, 'qteachat': 1 }]
+    } else {
+      achatTmp = state.achat.map((value, index) => {
+        if (value.idachat === id) {
+          value.qteachat++
+        } else {
+          value = { 'idachat': id, 'qteachat': 1 }
+        }
+        return value
+      })
+    }
+    console.dir(achatTmp);
     //state.article[id].qte--; ==>> ne fonctionnera pas !!!
-    //Option 1 (méthode bourrin !):
     if (state.articles[id].qte > 0) {
       let articlesTmp = state.articles;
       articlesTmp[id].qte--;
       setState({
         'articles': articlesTmp,
-        //spread operator Option 2 :
-        'achat': [...state.achat, id]
-
+        'achat': achatTmp
       })
     }
   }
