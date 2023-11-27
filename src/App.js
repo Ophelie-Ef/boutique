@@ -7,13 +7,20 @@ import Panier from './components/Panier/Panier';
 import './App.css';
 
 const App = () => {
+  const [state, setState] = React.useState(
+    {
+      'articles': articles,
+      'achat': []
+    }
+  )
+
   const [statePanier, setStatePanier] = React.useState({ 'displayPanier': false });
   const handleDisplayPanier = () => {
     setStatePanier({ 'displayPanier': !statePanier.displayPanier })
     // console.log(statePanier);
   }
 
-  const [state, setState] = React.useState({ 'articles': articles })
+
   const decrementQte = (id) => {
     //state.article[id].qte--; ==>> ne fonctionnera pas !!!
     //Option 1 (méthode bourrin !):
@@ -21,10 +28,12 @@ const App = () => {
       let articlesTmp = state.articles;
       articlesTmp[id].qte--;
       setState({
-        'articles': articlesTmp
+        'articles': articlesTmp,
+        //spread operator Option 2 :
+        'achat': [...state.achat, id]
+
       })
     }
-    //Option 2 : .....lundi  
   }
 
   return (
