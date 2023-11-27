@@ -43,7 +43,10 @@ const App = () => {
         <Menu sendEntries={menuentries} handleDisplayPanier={handleDisplayPanier}></Menu>
       </header>
       <main>
-        {statePanier.displayPanier ? <Panier handleDisplayPanier={handleDisplayPanier}></Panier> : <></>}
+        {statePanier.displayPanier ? <Panier
+        handleDisplayPanier={handleDisplayPanier}
+        achat={state.achat}
+        ></Panier> : <></>}
         <Gallery articles={state.articles} decrementQte={decrementQte}></Gallery>
       </main>
       <footer></footer>

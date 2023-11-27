@@ -6,7 +6,8 @@ const Panier = (props) => {
         <div className='backgroundPanier'>
             <div className='panier'>
                 <div className='close' onClick={props.handleDisplayPanier}>X</div>
-                Vos achats :
+                <h2>Vos achats :</h2>
+                
             </div>
         </div>
     )
