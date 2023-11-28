@@ -10,9 +10,9 @@ const Achat = (props) => {
         <div className='purchase'>
             <div className='artclImg'><img src={"./assets/img/" + article.img} alt="404 image not found !" /></div>
             <div className='artclName'>{article.name}</div>
-            <div>
-                <div>
-                    <p>Quantité :
+                <div className='cheat'>
+                    <span className='underlined'>Quantité :</span>
+                    <div className='combien'>
                         <span className='plusButton'>
                             <button className='plus' >-</button>
                         </span>
@@ -22,9 +22,8 @@ const Achat = (props) => {
                                 () => boutiqueContext.decrementQte(id)
                             }>+</button>
                         </span>
-                    </p>
+                    </div>
                 </div>
-            </div>
             <div className='ssTtPrice'></div>
         </div>
     )

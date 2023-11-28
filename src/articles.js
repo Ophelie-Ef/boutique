@@ -1,7 +1,7 @@
 const articles = [
     {
         id: 0,
-        name: "Bananas",
+        name: "Bananes, lots de 50 kg",
         img: 'coursesYiga.jpg',
         description: "Vous êtes un Yiga ? Vous A-D-O-R-E-Z les bananes ! Ici, on les vend en gros !",
         price: 245.0,

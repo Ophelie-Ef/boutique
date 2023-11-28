@@ -5,12 +5,17 @@
     list-style-type: none;
 }
 
-li {
-    margin: .5rem;
+.ListMenu li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: .5rem 1rem;
-    background-color: darkcyan;
-    border-radius: 5%;
+    background-color: #867070;
+    border-radius: 5px;
     color: cornsilk;
     font-size: 1.5rem;
     text-decoration: none;
+}
+
+.ListMenu li:hover {
+    cursor: pointer;
 }

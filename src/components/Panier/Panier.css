@@ -34,3 +34,28 @@
 .close:hover {
     cursor: pointer;
 }
+
+.panier h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  rgba(134, 112, 112, 0.75);
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* Media querries */
+
+@media screen and (min-width:576px) {
+    .tricheAchat{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+    .cheat{
+        width: 100%;
+    }
+    .purchase{
+        width: 30%;
+    }
+}

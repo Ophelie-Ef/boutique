@@ -1,0 +1,39 @@
+.purchase {
+    margin: 1rem 0;
+    padding: .5rem;
+    background-color: #F5EBEB;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+}
+
+.artclImg img {
+    width: 30%;
+    border: 5px double #000000;
+}
+
+.artclName {
+    font-weight: bold;
+    padding-top: .5rem;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.combien {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.plus,
+.moins {
+    padding: .25rem .5rem;
+}
+
+.cheat {
+    padding-top: 1rem;
+}

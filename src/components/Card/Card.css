@@ -1,9 +1,12 @@
 .Card {
-    background-color: white;
-    border: black solid 2px;
+    background-color: #F5EBEB;
+    border: #4d0019 solid 2px;
     border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
+    box-shadow: 5px 5px 10px 0px rgba(134, 112, 112, 0.75);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(134, 112, 112, 0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(134, 112, 112, 0.75);
     margin: .5rem;
     padding: 1rem;
     width: min-content;
@@ -16,12 +19,12 @@ img {
     width: auto;
 }
 
-.nom{
+.nom {
     font-weight: bold;
 }
 
-.prix{
-    background-color: yellow;
+.prix {
+    background-color: #D5B4B4;
     font-size: 2rem;
     padding: .5rem;
     border-radius: 10px 10px 10px 10px;
@@ -31,20 +34,30 @@ img {
 
 .triche {
     display: flex;
-    ;
     justify-content: space-between;
+    align-items: center;
+    padding-top: .5rem;
+}
+
+.cardButton {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .buy {
-    color: white;
+    color: cornsilk;
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: orangered;
-    border: orangered 2px solid;
+    background-color: #867070;
+    border: #867070 2px solid;
     border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     text-align: center;
-    padding: .5rem;
+    padding: 0.5rem;
+}
+
+.qte {
+    padding-bottom: .5rem;
 }

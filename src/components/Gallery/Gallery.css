@@ -1,4 +1,16 @@
 .Gallery {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media querries */
+
+@media screen and (min-width:576px) {
+    .Gallery {
+        flex-wrap: wrap;
+        flex-direction: unset;
+        justify-content: space-evenly;
+    }
 }

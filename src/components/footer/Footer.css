@@ -1,0 +1,43 @@
+.Footer{
+    background-color: #F5EBEB;
+    margin-top: 1rem;
+}
+
+.Footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+.Footer li{
+    width: 90%;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    padding: .5rem .5rem;
+    background-color: #867070;
+    border-radius: 5px;
+    color: cornsilk;
+    font-size: .75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Footer li:hover {
+    cursor: pointer;
+}
+
+/* Media querries */
+
+@media screen and (min-width:576px) {
+    .Footer ul{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .Footer li{
+        width: auto;
+    }
+}

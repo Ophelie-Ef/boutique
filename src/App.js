@@ -5,6 +5,7 @@ import { articles } from './articles';
 import { menuentries } from './menuentries';
 import Panier from './components/Panier/Panier';
 import BoutiqueContext from './contexts/BoutiqueContext';
+import Footer from './components/footer/Footer';
 import './App.css';
 
 const App = () => {
@@ -61,6 +62,11 @@ const App = () => {
     }
   }
 
+  //Check le git de Julien
+  //Check le git de Julien
+  //Check le git de Julien
+
+
   const handleDisplayPanier = () => {
     setStatePanier({ 'displayPanier': !statePanier.displayPanier })
     // console.log(statePanier);
@@ -78,7 +84,7 @@ const App = () => {
         ></Panier> : <></>}
         <Gallery articles={state.articles} decrementQte={decrementQte}></Gallery>
       </main>
-      <footer></footer>
+      <footer><Footer></Footer></footer>
     </BoutiqueContext.Provider>
   )
 }
